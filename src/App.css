@@ -238,4 +238,8 @@
 	.form-group{
 		width: 310px;
 	}
+
+	.button-submit{
+		width: 310px;
+	}
 }
