@@ -21,7 +21,7 @@
 }
 
 .inner-authbox {
-	padding: 30px 20px;
+	padding: 30px 70px;
 	margin: 20px 0;
 	background-color: #fff;
 	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
@@ -227,7 +227,7 @@
 	-webkit-text-stroke-width: 1px;
 }
 
-@media (min-width:700px) {
+@media (min-width:500px) {
 	.auth-box{
 		width: 530px;
 	}
