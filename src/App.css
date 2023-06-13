@@ -12,8 +12,8 @@
 }
 
 .auth-box {
-	/* padding: 20px; */
-	height: 581.5px;
+	padding: 20px 0px;
+	height: 631.5px;
 	width: 100%;
 	max-width: 450px;
 	text-align: left;
@@ -53,7 +53,7 @@
 	margin: 0 auto;
 	margin-bottom: 10px;
 	-webkit-font-smoothing: antialiased;
-	-webkit-text-stroke-color: rgba(0,0,0,0);
+	-webkit-text-stroke-color: rgba(0, 0, 0, 0);
 	-webkit-text-stroke-width: 1px;
 	text-shadow: rgba(0, 0, 0, 0.01);
 	color-scheme: none;
@@ -62,14 +62,14 @@
 .text-f15 {
 	width: 290px;
 	font-size: 15px;
-	font-family: 'Inter',sans-serif;
+	font-family: 'Inter', sans-serif;
 	font-weight: 500;
-	color: rgb(153,153,153);
+	color: rgb(153, 153, 153);
 	color-scheme: none;
 	text-align: center;
 	margin: 0 auto;
 	-webkit-font-smoothing: antialiased;
-	-webkit-text-stroke-color: rgba(0,0,0,0);
+	-webkit-text-stroke-color: rgba(0, 0, 0, 0);
 	-webkit-text-stroke-width: 1px;
 	text-shadow: rgba(0, 0, 0, 0.01);
 	/* margin-bottom: 10px; */
@@ -97,7 +97,7 @@
 	line-height: 21px;
 	text-align: left;
 	box-shadow: rgba(0, 0, 0, 0.01);
-	font-family: 'Inter',sans-serif;
+	font-family: 'Inter', sans-serif;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
@@ -105,19 +105,19 @@
 	color-scheme: dark;
 	font-weight: bold;
 	-webkit-font-smoothing: antialiased;
-	-webkit-text-stroke-color: rgba(0,0,0,0);
+	-webkit-text-stroke-color: rgba(0, 0, 0, 0);
 	-webkit-text-stroke-width: 1px;
 	text-shadow: rgba(0, 0, 0, 0.01);
 	color-scheme: none;
 }
 
-.label-block>a{
-	font-family: 'Inter',sans-serif;
+.label-block>a {
+	font-family: 'Inter', sans-serif;
 	color: #582db4;
 	font-size: 13px;
 	text-decoration-line: none;
 	-webkit-font-smoothing: antialiased;
-	-webkit-text-stroke-color: rgba(0,0,0,0);
+	-webkit-text-stroke-color: rgba(0, 0, 0, 0);
 	-webkit-text-stroke-width: 1px;
 	text-shadow: rgba(0, 0, 0, 0.01);
 	color-scheme: none;
@@ -129,9 +129,9 @@
 	border-color: rgb(215, 212, 226);
 	border-radius: 4px;
 	border-style: solid;
-	color: rgb(20,19,22);
+	color: rgb(20, 19, 22);
 	font-size: 16px;
-	font-family: 'Inter',sans-serif;
+	font-family: 'Inter', sans-serif;
 	padding: 11px 16px;
 	text-align: start;
 	width: 256px;
@@ -139,32 +139,89 @@
 	writing-mode: horizontal-tb;
 	-webkit-font-smoothing: antialiased;
 	-webkit-rtl-ordering: logical;
-	-webkit-text-stroke-color: rgba(0,0,0,0);
+	-webkit-text-stroke-color: rgba(0, 0, 0, 0);
 	-webkit-text-stroke-width: 1px;
 	text-shadow: rgba(0, 0, 0, 0.01);
 	color-scheme: none;
 }
 
-.input-block::placeholder{
+.input-block::placeholder {
 	color: rgb(215, 212, 226);
 }
 
-.input-block:focus{
+.input-block:focus {
 	outline: 4px auto #582db4;
 	-webkit-font-smoothing: antialiased;
-	-webkit-text-stroke-color: rgba(0,0,0,0);
+	-webkit-text-stroke-color: rgba(0, 0, 0, 0);
 	-webkit-text-stroke-width: 1px;
 	text-shadow: rgba(0, 0, 0, 0.01);
 	color-scheme: none;
 }
 
-.button-submit{
+.input-block.invalid {
+	border-color: rgb(229, 15, 56);
+}
+
+.error-message {
+	color: rgb(229, 15, 56);
+	font-size: 11px;
+	margin-top: 8px;
+
+	
+}
+
+.error-visible{
+	margin-bottom: 41px;
+}
+
+.button-submit {
 	width: 290px;
 	height: 35px;
-	background-color: #582db4;
+	background-color: rgb(80, 50, 150);
 	color: #fff;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	border-radius: 4px;
+	font-size: 13px;
+	font-family: 'Inter', sans-serif;
+	font-weight: bold;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-stroke-color: rgba(0, 0, 0, 0);
+	-webkit-text-stroke-width: 1px;
+	outline: none;
+}
+
+.last-text-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 40px;
+	width: 290px;
+	margin: 0 auto;
+	margin-top: 35px;
+	margin-bottom: 15px;
+}
+
+.last-text {
+	font-size: 16px;
+	color: rgb(102, 102, 102);
+	font-family: 'Inter', sans-serif;
+	font-weight: 500;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-stroke-color: rgba(0, 0, 0, 0);
+	-webkit-text-stroke-width: 1px;
+	width: 290px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 4px;
+}
+
+.last-text>a {
+	color: #582db4;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-stroke-color: rgba(0, 0, 0, 0);
+	-webkit-text-stroke-width: 1px;
 }
