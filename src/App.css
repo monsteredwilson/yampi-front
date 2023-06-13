@@ -10,6 +10,7 @@
 	margin-left: 0px;
 	margin-right: 0px;
 	height: 100vh;
+	max-height: 100%;
 }
 
 .auth-box {
@@ -21,7 +22,7 @@
 }
 
 .inner-authbox {
-	padding: 30px 70px;
+	padding: 30px 50px;
 	margin: 20px 0;
 	background-color: #fff;
 	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
