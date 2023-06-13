@@ -225,3 +225,9 @@
 	-webkit-text-stroke-color: rgba(0, 0, 0, 0);
 	-webkit-text-stroke-width: 1px;
 }
+
+@media (min-width:700px) {
+	.auth-box{
+		width: 530px;
+	}
+}
