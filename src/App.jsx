@@ -85,7 +85,7 @@ function App() {
 					<div className={`form-group ${errors.password && isFormSubmitted ? 'error-visible' : ''}`}>
 						<label htmlFor='form-stacked-text' className='label-block'>
 							<span>Senha</span>
-							<a href='https://app.yampi.com.br/'>Esqueci minha senha</a>
+							<a href='https://app.yampi.com.br/recuperar-senha'>Esqueci minha senha</a>
 						</label>
 						<input
 							type='password'
