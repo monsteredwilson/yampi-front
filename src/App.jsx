@@ -61,7 +61,7 @@ function App() {
 						<input
 							type='email'
 							name='email'
-							placeholder='john@yampi.com'
+							placeholder='john@yampi.com.br'
 							className={`input-block ${errors.email && isFormSubmitted ? 'invalid' : ''}`}
 							onChange={handleEmailLogin}
 							
