@@ -236,7 +236,7 @@
 	}
 
 	.input-block{
-		width: 310px;
+		width: 276px;
 	}
 
 	.label-block{
@@ -244,6 +244,15 @@
 	}
 
 	.button-submit{
+		width: 310px;
+	}
+
+	.title-f20{
+		width: 310px;
+		font-size: 30px;
+	}
+
+	.text-f15{
 		width: 310px;
 	}
 }
