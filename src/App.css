@@ -230,4 +230,12 @@
 	.auth-box{
 		width: 530px;
 	}
+
+	.form-container{
+		width: 310px;
+	}
+
+	.form-group{
+		width: 310px;
+	}
 }
